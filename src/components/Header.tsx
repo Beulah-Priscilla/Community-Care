@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <AppBar position="static" color="primary">
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography variant="h4" sx={{ flexGrow: 1 }}>
           CommunityCare
         </Typography>
         <IconButton color="inherit">

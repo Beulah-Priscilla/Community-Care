@@ -11,20 +11,22 @@ import Footer from './components/Footer'
 
 const App: React.FC = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100vw' }}>
       <Box sx={{ display: 'flex', flex: 1 }}>
-      <Sidebar />
-        <Box sx={{ flexGrow: 1, p: 2 }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/requests" element={<Requests />} />
-            <Route path="/volunteers" element={<Volunteers />} />
-            <Route path="/resources" element={<Resources />} />
-          </Routes>
+        <Sidebar />
+        <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column'}}>
+          <Header />
+          <Box sx={{ flexGrow: 1, p: 2 }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/requests" element={<Requests />} />
+              <Route path="/volunteers" element={<Volunteers />} />
+              <Route path="/resources" element={<Resources />} />
+            </Routes>
+          </Box>
+          <Footer />
         </Box>
       </Box>
-      <Footer />
     </Box>
   );
 };
