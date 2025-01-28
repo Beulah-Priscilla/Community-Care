@@ -10,6 +10,17 @@ const Volunteers: React.FC = () => {
       title: 'Tutoring', description: 'Provide online tutoring to children in need.'
     },
   ];
+  const stats = [
+    { title: 'Total Volunteers', value: 120 },
+    { title: 'Hours Volunteered', value: 3500 },
+    { title: 'Projects Completed', value: 45 },
+  ];
+
+  const badges = [
+    { title: 'Top Volunteer', description: 'Awarded for 100+ hours of service' },
+    { title: 'Community Hero', description: 'Recognized for outstanding contributions' },
+  ];
+
   return (
     <Box sx={{ maxWidth: 800, mx: 'auto', mt: 4 }}>
       <Typography variant="h4" gutterBottom>
@@ -26,6 +37,37 @@ const Volunteers: React.FC = () => {
         </CardContent>
       </Card>
       ))}
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h4" gutterBottom>
+          Volunteer Stats
+        </Typography>
+        <Box display="flex" justifyContent="space-between">
+          {stats.map((stat, index) => (
+            <Card key={index} sx={{ flex: 1, mx: 1 }}>
+              <CardContent>
+                <Typography variant="h6">{stat.title}</Typography>
+                <Typography variant="h4">{stat.value}</Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </Box>
+
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h4" gutterBottom>
+          Volunteer Badges
+        </Typography>
+        <Box display="flex" justifyContent="space-between">
+          {badges.map((badge, index) => (
+            <Card key={index} sx= {{ flex: 1, mx: 1 }}>
+              <CardContent>
+                <Typography variant="h6">{badge.title}</Typography>
+                <Typography variant="h4">{badge.description}</Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </Box>
     </Box>
   );
 };
