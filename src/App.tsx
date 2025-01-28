@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 
 const App: React.FC = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100vw' }}>
+    <Box sx={{ display: 'flex', minHeight: '100vh', width: '100vw' }}>
       <Box sx={{ display: 'flex', flex: 1 }}>
         <Sidebar />
         <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column'}}>
