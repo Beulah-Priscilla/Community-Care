@@ -1,8 +1,8 @@
 import { Box, Grid, Typography, Card, CardContent, Button } from "@mui/material";
 import React from "react";
-import Map from '../components/Map';
+import Map from "../components/Map"
 
-const Resources: React.FC = () => {
+const Resources:React.FC = () => {
   const resources = [
     {
       title: 'Local Food Banks',
@@ -43,11 +43,11 @@ const Resources: React.FC = () => {
                   {resource.description}
                 </Typography>
                 <Button
-                  variant="outlined"
-                  color="primary"
-                  href={resource.link}
-                  target="_blank"
-                  rel="noopener noreferrer">
+                variant="outlined"
+                color="primary"
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer">
                   Learn More
                 </Button>
               </CardContent>
@@ -55,7 +55,7 @@ const Resources: React.FC = () => {
           </Box>
         ))}
       </Box>
-      <Box sx={{ mt: 4 }}>
+      <Box>
         <Typography variant="h4" gutterBottom>
           Nearby Resources
         </Typography>
