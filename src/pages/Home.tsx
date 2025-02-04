@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         CommunityCare is a platform dedicated to connecting people in need with volunteers and resources in their area.
         Join us in building stronger, more caring communities.
       </Typography>
-      <Box sx={{ mt: 4 }}>
+      <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', gap: 2 }}>
         <Grid2 container spacing={2} justifyContent="center">
           <Grid2>
             <Button variant="contained" color="primary" href="/requests">

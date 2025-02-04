@@ -26,7 +26,7 @@ const Sidebar: React.FC = () => {
           <ListItem disablePadding key={index}>
             <ListItemButton component={Link} to={item.path}>
               <ListItemText primary={item.text} />
-            </ListItemButton>  
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
