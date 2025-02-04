@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Card, CardContent, Button } from "@mui/material";
+import { Box, Typography, Card, CardContent, Button } from "@mui/material";
 import React from "react";
 import Map from "../components/Map"
 
@@ -27,7 +27,7 @@ const Resources:React.FC = () => {
   ];
 
   return (
-    <Box>
+    <Box sx={{ p: 2}}>
       <Typography variant="h4" gutterBottom>
         Available Resources
       </Typography>
@@ -36,10 +36,10 @@ const Resources:React.FC = () => {
           <Box width={{ xs: '100%', sm: '48%', md: '30%' }} key={index} mb={2}>
             <Card>
               <CardContent>
-                <Typography>
+                <Typography variant="h6">
                   {resource.title}
                 </Typography>
-                <Typography>
+                <Typography variant="body2" color="textSecondary">
                   {resource.description}
                 </Typography>
                 <Button
@@ -55,7 +55,7 @@ const Resources:React.FC = () => {
           </Box>
         ))}
       </Box>
-      <Box>
+      <Box sx={{ mt: 4 }}>
         <Typography variant="h4" gutterBottom>
           Nearby Resources
         </Typography>

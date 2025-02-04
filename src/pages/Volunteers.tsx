@@ -41,14 +41,16 @@ const Volunteers: React.FC = () => {
         <Typography variant="h4" gutterBottom>
           Volunteer Stats
         </Typography>
-        <Box display="flex" justifyContent="space-between">
+        <Box display="flex" flexWrap="wrap" justifyContent="space-between">
           {stats.map((stat, index) => (
-            <Card key={index} sx={{ flex: 1, mx: 1 }}>
-              <CardContent>
-                <Typography variant="h6">{stat.title}</Typography>
-                <Typography variant="h4">{stat.value}</Typography>
-              </CardContent>
-            </Card>
+            <Box width={{ xs: '100%', sm: '48%', md: '30%' }} key={index} mb={2}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6">{stat.title}</Typography>
+                  <Typography variant="h4">{stat.value}</Typography>
+                </CardContent>
+              </Card>
+            </Box>
           ))}
         </Box>
       </Box>
@@ -57,14 +59,16 @@ const Volunteers: React.FC = () => {
         <Typography variant="h4" gutterBottom>
           Volunteer Badges
         </Typography>
-        <Box display="flex" justifyContent="space-between">
+        <Box display="flex" flexWrap="wrap" justifyContent="space-between" gap={6}>
           {badges.map((badge, index) => (
-            <Card key={index} sx= {{ flex: 1, mx: 1 }}>
-              <CardContent>
-                <Typography variant="h6">{badge.title}</Typography>
-                <Typography variant="h4">{badge.description}</Typography>
-              </CardContent>
-            </Card>
+            <Box width={{ xs: '100%', sm: '48%' }} flex={1} key={index} mb={2}>
+              <Card sx={{ height: 200 }}>
+                <CardContent>
+                  <Typography variant="h6">{badge.title}</Typography>
+                  <Typography variant="h4">{badge.description}</Typography>
+                </CardContent>
+              </Card>
+            </Box>
           ))}
         </Box>
       </Box>
